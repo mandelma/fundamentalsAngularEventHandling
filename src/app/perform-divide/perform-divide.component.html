@@ -1,0 +1,13 @@
+<div class="divide-panel">
+    <label for="dropdown">Valitse numero jolla jaat {{sum}}</label><br>
+    <select id="dropdown" [(ngModel)] = 'selected' >
+        <option *ngFor="let option of options" [value]="option" > {{option}} </option>
+    </select><br><br>
+
+    <button (click) = "divideSum()">
+        Divide with {{selected}}
+    </button>
+
+<p>{{divided}} </p>
+</div>
+

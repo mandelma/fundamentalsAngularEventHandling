@@ -1,0 +1,18 @@
+<style>
+    .random-panel {
+        text-align: center;
+    }
+</style>
+<div class="random-panel">
+    <input type="number" [(ngModel)] = "input_number" placeholder="Lisää number..." /><br><br>
+    <button (click) = "generateRandomNumber()">Get random number between 1 - 100</button>
+    <p *ngIf="input_number !== null"> Input number: {{input_number}} </p>
+    
+    <p *ngIf="rand !== null"> Random number: {{rand}} </p>
+
+    <p *ngIf="randPlusInput !== ''">Laskeminen: {{randPlusInput}} </p>
+    
+    <app-perform-divide [sum] = "parentMessage"> </app-perform-divide>
+    
+</div>
+
